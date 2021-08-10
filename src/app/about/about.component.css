@@ -1,0 +1,13 @@
+.about-under-construct {
+  margin-top: 10%;
+  margin-left: 40%;
+  width: 60%;
+  padding: 10px;
+}
+
+.text {
+  font-size: x-large;
+  font-weight: bold;
+  color: blueviolet;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

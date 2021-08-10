@@ -1,0 +1,25 @@
+<div class="main-container">
+    <app-header></app-header>
+    <div class="city-list">
+        <h2>List of cities</h2>
+        <table>
+            <th>Name</th>
+            <th>Temperature</th>
+            <th>Sunrise Time</th>
+            <th>Sunset Time</th>
+            <tr *ngFor="let city of cities">
+                <td><a class="city-name" [routerLink]="['/city', city.name]"> {{city.name}}</a></td>
+                <td> {{city.main?.temp}} &deg;C</td>
+                <td> {{city.sys?.sunrise| date: 'MMM d, y @ HH:mm:ss'}}</td>
+                <td> {{city.sys?.sunset | date: 'MMM d, y @ HH:mm:ss'}}</td>
+            </tr>
+        </table>
+</div>
+<h3>Note from openweathermap.org</h3>
+<div class="info-board info-board-orange">
+    If you do not see some of the parameters in your API response it means that these weather phenomena are just not 
+    happened for the time of measurement for the city or location chosen.
+    Only really measured or calculated data is displayed in API response.
+</div>
+            
+</div>

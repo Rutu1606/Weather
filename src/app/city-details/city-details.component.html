@@ -1,0 +1,25 @@
+<div class="main-container">
+  <app-header></app-header>
+  <div class="city-details">
+    <h2> {{cityName}}</h2>
+    <table>
+        <tr>
+          <th>Day</th>
+          <th>Temperature</th>
+          <th>Sea Level</th>
+        </tr>
+        <tr *ngFor="let detail of details">
+          <td> {{formatDate(detail.dt)}}</td>
+          <td>{{detail.main?.temp}} &deg;C</td>
+          <td>{{detail.main?.sea_level}} </td>
+        </tr>
+      </table>
+  </div>
+  <div class="info-board info-board-orange">
+    No API found for temperature and sea level for the next 5 days at 9:00.
+    API used here shows 5 day forecast data with 3-hour step.
+ </div>
+</div>
+
+
+  
